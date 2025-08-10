@@ -17,7 +17,7 @@ const {user} = useUser()
          {
           sidebar ? <X onClick={()=>setsidebar(false)} className='w-6 h-6 text-gray-600 sm:hidden'/>
           :
-          <Menu onClick={()=>setsidebar(truee)} className='w-6 h-6 text-gray-600 sm:hidden'/>
+          <Menu onClick={()=>setsidebar(true)} className='w-6 h-6 text-gray-600 sm:hidden'/>
          }
       </nav>
 
