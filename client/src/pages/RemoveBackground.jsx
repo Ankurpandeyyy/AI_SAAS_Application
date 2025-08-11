@@ -1,4 +1,4 @@
-import { Eraser, Sparkles } from 'lucide-react';
+import { Download, Eraser, Sparkles } from 'lucide-react';
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 import axios from 'axios';
@@ -69,6 +69,13 @@ const RemoveBackground = () => {
         <div className='flex items-center gap-3'>
           <Eraser className='w-7 h-7 text-[#FF4938]' />
           <h1 className='text-2xl font-semibold'>Processed Image</h1>
+          {
+            content && (
+              <a href={content} download="generated-image.jpg" target='_blank' rel='noopener noreferrer'>
+                <Download className='text-[#FF4938] w-7 h-7 ml-4' />
+              </a>
+            )
+          }
         </div>
 
         {
